@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bell'Audace Coaching – Stéphanie Duvoux | Coach Emploi Nancy</title>
+<meta name="description" content="Coach emploi et confiance en soi à Nancy. Préparez vos entretiens, optimisez votre CV, développez votre confiance. 20 ans d'expérience. Visio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocre: #C9924A;
+    --ocre-light: #E8C48A;
+    --sand: #F5EDE0;
+    --sand-deep: #EDE0CC;
+    --rose: #D4A5A0;
+    --rose-light: #F0DDD9;
+    --navy: #2C3A4A;
+    --charcoal: #3D3530;
+    --white: #FEFAF6;
+    --text: #3D3530;
+    --text-light: #7A6E68;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(254,250,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,146,74,0.15);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span { color: var(--ocre); font-style: italic; }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.25s;
+  }
+
+  .nav-links a:hover { color: var(--ocre); }
+
+  .nav-cta {
+    background: var(--ocre);
+    color: white !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.25s !important;
+  }
+
+  .nav-cta:hover { background: var(--charcoal) !important; color: white !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--charcoal);
+    transition: all 0.3s;
+    display: block;
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 72px;
+    background: var(--sand);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,146,74,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 5% 4rem 8%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ocre);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--ocre);
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--ocre);
+    font-weight: 300;
+  }
+
+  .hero-title strong {
+    font-weight: 600;
+    display: block;
+    font-style: normal;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 460px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--ocre);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(201,146,74,0.3);
+  }
+
+  .btn-primary:hover { background: var(--charcoal); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(61,53,48,0.2); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--charcoal);
+    padding: 1rem 2rem;
+    border: 1.5px solid var(--charcoal);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s;
+  }
+
+  .btn-secondary:hover { background: var(--charcoal); color: white; }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(201,146,74,0.2);
+  }
+
+  .stat-item { text-align: left; }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--ocre);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    position: relative;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: saturate(0.9);
+  }
+
+  .hero-badge {
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
+    background: white;
+    border-radius: 4px;
+    padding: 1rem 1.4rem;
+    box-shadow: 0 8px 40px rgba(61,53,48,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 220px;
+    animation: floatBadge 3s ease-in-out infinite;
+  }
+
+  @keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .badge-icon { font-size: 1.6rem; }
+
+  .badge-text-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .badge-text-sub {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== SOCIAL FLOATING ===== */
+  .social-float {
+    position: fixed;
+    right: 24px;
+    bottom: 100px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .whatsapp-btn { background: #25D366; color: white; }
+  .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+  .facebook-btn { background: #1877F2; color: white; }
+  .facebook-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(24,119,242,0.4); }
+
+  /* ===== SECTION TITLES ===== */
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ocre);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--charcoal);
+  }
+
+  .section-title em { font-style: italic; color: var(--ocre); }
+
+  .section-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--ocre);
+    margin: 1.2rem auto 0;
+  }
+
+  /* ===== SERVICES ===== */
+  #services {
+    padding: 6rem 5%;
+    background: var(--white);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: var(--sand);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--ocre);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(61,53,48,0.1); }
+  .service-card:hover::before { transform: scaleY(1); }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.8rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  .service-price {
+    margin-top: 1.5rem;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ocre);
+    border-bottom: 1px solid var(--ocre);
+    padding-bottom: 2px;
+  }
+
+  /* ===== LINKEDIN POSTS ===== */
+  #conseils {
+    padding: 6rem 5%;
+    background: var(--sand);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .post-card {
+    background: white;
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 2px 20px rgba(61,53,48,0.06);
+    border: 1px solid rgba(201,146,74,0.15);
+    transition: box-shadow 0.3s;
+  }
+
+  .post-card:hover { box-shadow: 0 8px 32px rgba(61,53,48,0.12); }
+
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--sand-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ocre);
+    flex-shrink: 0;
+  }
+
+  .post-author { font-size: 0.82rem; font-weight: 600; color: var(--charcoal); }
+  .post-role { font-size: 0.72rem; color: var(--text-light); }
+
+  .post-body {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--text);
+    white-space: pre-line;
+  }
+
+  .post-body .highlight {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .post-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ocre);
+    background: rgba(201,146,74,0.1);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+  }
+
+  .linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #0A66C2;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .linkedin-link:hover { opacity: 1; }
+
+  /* ===== CV UPLOAD ===== */
+  #cv-audit {
+    padding: 6rem 5%;
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #cv-audit::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,146,74,0.08) 0%, transparent 70%);
+  }
+
+  #cv-audit .section-eyebrow { color: var(--ocre-light); }
+  #cv-audit .section-title { color: var(--sand); }
+  #cv-audit .section-divider { }
+
+  .cv-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cv-desc {
+    color: rgba(245,237,224,0.7);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .cv-upload-area {
+    border: 2px dashed rgba(201,146,74,0.4);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .cv-upload-area:hover, .cv-upload-area.dragging {
+    border-color: var(--ocre);
+    background: rgba(201,146,74,0.06);
+  }
+
+  .cv-upload-area input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .upload-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+  .upload-text-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--sand);
+    margin-bottom: 0.5rem;
+  }
+
+  .upload-text-sub { color: rgba(245,237,224,0.5); font-size: 0.82rem; }
+
+  .cv-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .cv-form input, .cv-form textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,146,74,0.2);
+    border-radius: 3px;
+    padding: 0.9rem 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    color: var(--sand);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .cv-form input::placeholder, .cv-form textarea::placeholder { color: rgba(245,237,224,0.35); }
+  .cv-form input:focus, .cv-form textarea:focus { border-color: var(--ocre); }
+
+  .cv-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .cv-success {
+    display: none;
+    color: #4ade80;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  /* ===== À PROPOS ===== */
+  #apropos {
+    padding: 6rem 5%;
+    background: var(--white);
+  }
+
+  .apropos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .apropos-image {
+    position: relative;
+  }
+
+  .apropos-photo {
+    width: 100%;
+    border-radius: 4px;
+    filter: saturate(0.9);
+    display: block;
+  }
+
+  .apropos-deco {
+    position: absolute;
+    bottom: -24px;
+    right: -24px;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(201,146,74,0.3);
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  .apropos-content .section-header { text-align: left; }
+  .apropos-content .section-divider { margin-left: 0; }
+
+  .apropos-text {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+  }
+
+  .apropos-text strong { color: var(--charcoal); font-weight: 600; }
+
+  .expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .tag {
+    background: var(--sand);
+    border: 1px solid rgba(201,146,74,0.25);
+    color: var(--charcoal);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .certifs {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .certif-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-light);
+  }
+
+  .certif-item::before {
+    content: '✦';
+    color: var(--ocre);
+    font-size: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  /* ===== LIVRE ===== */
+  #livre {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--sand) 0%, var(--rose-light) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .livre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .livre-image-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .livre-photo {
+    width: 280px;
+    border-radius: 4px;
+    box-shadow: 20px 30px 60px rgba(61,53,48,0.2);
+    transform: rotate(-3deg);
+    transition: transform 0.4s;
+    display: block;
+  }
+
+  .livre-photo:hover { transform: rotate(0deg) scale(1.02); }
+
+  .livre-content .section-header { text-align: left; }
+  .livre-content .section-divider { margin-left: 0; }
+
+  .livre-desc {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .livre-points {
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .livre-points li {
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .livre-points li::before {
+    content: '→';
+    color: var(--ocre);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .amazon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #FF9900;
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.25s;
+    box-shadow: 0 4px 16px rgba(255,153,0,0.3);
+  }
+
+  .amazon-btn:hover { background: #e68a00; transform: translateY(-2px); }
+
+  /* ===== AVIS ===== */
+  #avis {
+    padding: 6rem 5%;
+    background: var(--white);
+  }
+
+  .rating-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .rating-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--ocre);
+    line-height: 1;
+  }
+
+  .stars-row {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+  }
+
+  .star { color: #F5A623; }
+
+  .rating-count { font-size: 0.85rem; color: var(--text-light); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .review-card {
+    background: var(--sand);
+    border-radius: 4px;
+    padding: 1.8rem;
+    position: relative;
+  }
+
+  .review-stars { font-size: 0.9rem; margin-bottom: 0.8rem; }
+  .review-stars span { color: #F5A623; }
+
+  .review-text {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 1.2rem;
+  }
+
+  .review-author {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    letter-spacing: 0.05em;
+  }
+
+  .review-date {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+  }
+
+  .google-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+
+  /* ===== FORMULAIRE RDV ===== */
+  #rdv {
+    padding: 6rem 5%;
+    background: var(--sand);
+  }
+
+  .rdv-container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .rdv-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .rdv-option {
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 1.4rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+
+  .rdv-option:hover, .rdv-option.active {
+    border-color: var(--ocre);
+    background: rgba(201,146,74,0.05);
+  }
+
+  .rdv-option .opt-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+
+  .rdv-option .opt-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.3rem;
+  }
+
+  .rdv-option .opt-desc {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  .rdv-option .opt-badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    background: var(--ocre);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+  }
+
+  .rdv-form {
+    background: white;
+    border-radius: 4px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 30px rgba(61,53,48,0.07);
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .form-group label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .form-group input, .form-group select, .form-group textarea {
+    border: 1.5px solid rgba(61,53,48,0.12);
+    border-radius: 3px;
+    padding: 0.8rem 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    outline: none;
+    transition: border-color 0.2s;
+    background: white;
+    width: 100%;
+  }
+
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--ocre);
+  }
+
+  .form-full { grid-column: 1 / -1; }
+  .form-note { font-size: 0.75rem; color: var(--text-light); margin-top: 1rem; text-align: center; }
+
+  .rdv-success {
+    display: none;
+    background: rgba(74,222,128,0.1);
+    border: 1px solid rgba(74,222,128,0.3);
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #16a34a;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  /* ===== CONTACT ===== */
+  #contact {
+    padding: 6rem 5%;
+    background: var(--charcoal);
+    color: var(--sand);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  #contact .section-eyebrow { color: var(--ocre-light); }
+  #contact .section-title { color: var(--sand); }
+  #contact .section-header { text-align: left; }
+  #contact .section-divider { margin-left: 0; }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(201,146,74,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-item-text { font-size: 0.88rem; color: rgba(245,237,224,0.7); line-height: 1.6; }
+  .contact-item-text strong { color: var(--sand); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 0.2rem; }
+  .contact-item-text a { color: rgba(245,237,224,0.9); text-decoration: none; }
+  .contact-item-text a:hover { color: var(--ocre-light); }
+
+  .map-container {
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 0.85;
+  }
+
+  .map-container iframe { display: block; width: 100%; height: 350px; }
+
+  .social-links-contact {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-link-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.06);
+    color: var(--sand);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .social-link-contact:hover { background: rgba(201,146,74,0.2); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #1e2730;
+    color: rgba(245,237,224,0.5);
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  footer a { color: var(--ocre-light); text-decoration: none; }
+
+  /* ===== ANIMATIONS ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    #hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 5rem 6% 3rem; }
+    .hero-right { min-height: 400px; }
+    .hero-badge { left: 16px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .posts-grid { grid-template-columns: 1fr; }
+    .apropos-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .livre-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+    .livre-content .section-header { text-align: center; }
+    .livre-content .section-divider { margin: 1.2rem auto 0; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .rdv-options { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .cv-form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid rgba(201,146,74,0.15); padding: 1.5rem 5%; gap: 1.2rem; }
+    .social-float { right: 12px; bottom: 80px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING SOCIAL BUTTONS -->
+<div class="social-float">
+  <a href="https://wa.me/33661686108?text=Bonjour%20Stéphanie%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20accompagnements." target="_blank" class="social-btn whatsapp-btn" title="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="https://www.facebook.com/stephanieduvoux/" target="_blank" class="social-btn facebook-btn" title="Facebook">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Bell<span>'Audace</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cv-audit">Audit CV</a></li>
+    <li><a href="#conseils">Conseils</a></li>
+    <li><a href="#livre">Mon Livre</a></li>
+    <li><a href="#apropos">À Propos</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#rdv" class="nav-cta">Prendre RDV</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Coach Emploi & Confiance en Soi · Visio</div>
+    <h1 class="hero-title">
+      Osez votre<br>
+      <em>Bell'Audace</em><br>
+      <strong>professionnelle</strong>
+    </h1>
+    <p class="hero-subtitle">
+      CV percutant, entretien maîtrisé, confiance retrouvée — je vous accompagne de la candidature à la réussite, avec 20 ans d'expérience terrain à vos côtés.
+    </p>
+    <div class="hero-buttons">
+      <a href="#rdv" class="btn-primary">🎁 10 min offertes</a>
+      <a href="#services" class="btn-secondary">Découvrir</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">+150</div>
+        <div class="stat-label">Candidats accompagnés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20</div>
+        <div class="stat-label">Ans d'expérience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Sur-mesure & Visio</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-container">
+      <img src="/mnt/user-data/uploads/1776070160819.jpeg" alt="Stéphanie Duvoux – Bell'Audace Coaching" class="hero-photo" onerror="this.style.background='linear-gradient(135deg, #E8C48A, #D4A5A0)'; this.style.minHeight='600px'">
+      <div class="hero-badge">
+        <div class="badge-icon">⭐</div>
+        <div>
+          <div class="badge-text-main">Nancy & Visio</div>
+          <div class="badge-text-sub">Villers-lès-Nancy · 06 61 68 61 08</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Mes Accompagnements</div>
+    <h2 class="section-title">Ce que je peux faire<br><em>pour vous</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">📄</div>
+      <div class="service-title">CV Pro & Optimisé</div>
+      <p class="service-desc">Un CV punchy, structuré et orienté résultats qui accroche les recruteurs dès les 5 premières secondes. Plus de candidatures sans retour.</p>
+      <span class="service-price">Rédaction & Audit</span>
+    </div>
+    <div class="service-card fade-in" style="transition-delay: 0.1s">
+      <div class="service-icon">🎯</div>
+      <div class="service-title">Coaching Entretien</div>
+      <p class="service-desc">Simulations réalistes, maîtrise des questions pièges, structuration de vos réponses. Je vous entraîne jusqu'à ce que vous soyez irrésistible en entretien.</p>
+      <span class="service-price">Préparation complète</span>
+    </div>
+    <div class="service-card fade-in" style="transition-delay: 0.2s">
+      <div class="service-icon">🚀</div>
+      <div class="service-title">Accès à la Promotion</div>
+      <p class="service-desc">Affirmation professionnelle, négociation salariale, prise de confiance. Je vous aide à prendre la place que vous méritez.</p>
+      <span class="service-price">Montée en puissance</span>
+    </div>
+    <div class="service-card fade-in" style="transition-delay: 0.1s">
+      <div class="service-icon">🧠</div>
+      <div class="service-title">Gestion du Stress</div>
+      <p class="service-desc">Lever les blocages inconscients, déconstruire le syndrome de l'imposteur, ancrer des comportements positifs. Du coaching profond et bienveillant.</p>
+      <span class="service-price">Coaching de vie</span>
+    </div>
+    <div class="service-card fade-in" style="transition-delay: 0.2s">
+      <div class="service-icon">🔄</div>
+      <div class="service-title">Reconversion</div>
+      <p class="service-desc">Vous êtes à un tournant ? Je vous aide à structurer votre projet, valoriser vos compétences transférables et aborder les recruteurs avec conviction.</p>
+      <span class="service-price">Nouveau départ</span>
+    </div>
+    <div class="service-card fade-in" style="transition-delay: 0.3s">
+      <div class="service-icon">🏆</div>
+      <div class="service-title">Formation Entreprise</div>
+      <p class="service-desc">Qualité, formation, intégration — 7 audits AFNOR validés, +1 400 collaborateurs certifiés. Une méthode éprouvée pour vos équipes.</p>
+      <span class="service-price">Prestation sur-mesure</span>
+    </div>
+  </div>
+</section>
+
+<!-- CV AUDIT -->
+<section id="cv-audit">
+  <div class="cv-container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Audit Gratuit</div>
+      <h2 class="section-title" style="color: var(--sand);">Déposez votre CV,<br><em style="color: var(--ocre-light);">je vous réponds sous 24h</em></h2>
+      <div class="section-divider"></div>
+    </div>
+    <p class="cv-desc fade-in">
+      Votre CV ne génère pas de retours ? Déposez-le ici. Je l'analyse et vous envoie un retour personnalisé. Parce que chaque ligne doit prouver que vous êtes la solution au problème de votre futur manager.
+    </p>
+    <div class="cv-upload-area fade-in" id="dropZone">
+      <input type="file" id="cvFile" accept=".pdf,.doc,.docx" onchange="handleFileSelect(this)">
+      <div class="upload-icon">📎</div>
+      <div class="upload-text-main" id="uploadLabel">Glissez votre CV ici</div>
+      <div class="upload-text-sub">PDF, Word — max 5 Mo</div>
+    </div>
+    <div class="cv-form fade-in">
+      <div class="cv-form-row">
+        <input type="text" placeholder="Votre prénom" id="cvPrenom">
+        <input type="email" placeholder="Votre email" id="cvEmail">
+      </div>
+      <input type="text" placeholder="Poste recherché ou secteur d'activité" id="cvPoste">
+      <textarea rows="3" placeholder="Votre message (optionnel)" id="cvMessage" style="resize: vertical;"></textarea>
+      <button class="btn-primary" onclick="submitCV()" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+        Envoyer mon CV pour analyse →
+      </button>
+      <div class="cv-success" id="cvSuccess">✅ Merci ! Stéphanie vous répond sous 24h.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSEILS LINKEDIN -->
+<section id="conseils">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Conseils & Stratégie</div>
+    <h2 class="section-title">Mes posts <em>qui font réfléchir</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="posts-grid">
+    <div class="post-card fade-in">
+      <div class="post-header">
+        <div class="post-avatar">SD</div>
+        <div>
+          <div class="post-author">Stéphanie Duvoux</div>
+          <div class="post-role">Coach Emploi · Bell'Audace</div>
+        </div>
+      </div>
+      <div class="post-body">
+<span class="highlight">🛑 Arrêtez d'envoyer des CV qui parlent de VOUS.</span>
+
+Vous envoyez des dizaines de candidatures sans retour ? Vous faites peut-être cette erreur classique : vous parlez de vous... sans jamais parler du <em>poste</em>.
+
+Un recruteur ne lit pas votre CV pour apprendre à vous connaître. Il le parcourt pour répondre à une seule question :
+👉 « Est-ce que cette personne peut résoudre mon problème ? »
+
+<span class="highlight">❌ Avant :</span> « Je suis quelqu'un d'autonome et d'organisé. »
+<span class="highlight">✅ Après :</span> « Gestion autonome de 50 dossiers clients/mois avec 95% de satisfaction. »
+
+Votre CV ne doit pas être un résumé de votre vie, mais une réponse à une offre. 🎯
+      </div>
+      <span class="post-tag">#CV #Recrutement</span>
+      <a href="https://www.linkedin.com/in/consultanteicn/" target="_blank" class="linkedin-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Voir sur LinkedIn
+      </a>
+    </div>
+
+    <div class="post-card fade-in" style="transition-delay: 0.1s">
+      <div class="post-header">
+        <div class="post-avatar">SD</div>
+        <div>
+          <div class="post-author">Stéphanie Duvoux</div>
+          <div class="post-role">Coach Emploi · Bell'Audace</div>
+        </div>
+      </div>
+      <div class="post-body">
+<span class="highlight">❌ Personne ne répond à ton CV ?</span>
+
+C'est souvent une question de <em>positionnement</em>, pas de compétences.
+
+Voici les 3 erreurs que je vois le plus souvent :
+
+<span class="highlight">1.</span> Un titre générique : « Chargé(e) de mission » → personne ne sait ce que vous faites.
+<span class="highlight">2.</span> Des missions sans résultats : dire ce qu'on faisait, pas ce qu'on a accompli.
+<span class="highlight">3.</span> Un design surchargé qui noie l'information essentielle.
+
+La règle d'or : un recruteur passe 7 secondes sur votre CV. Faites que ces 7 secondes comptent.
+
+💡 <em>Transformez votre carrière. Investissez dans votre succès !</em>
+      </div>
+      <span class="post-tag">#EntretienEmbauche #Carrière</span>
+      <a href="https://www.linkedin.com/in/consultanteicn/" target="_blank" class="linkedin-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Voir sur LinkedIn
+      </a>
+    </div>
+
+    <div class="post-card fade-in" style="transition-delay: 0.15s">
+      <div class="post-header">
+        <div class="post-avatar">SD</div>
+        <div>
+          <div class="post-author">Stéphanie Duvoux</div>
+          <div class="post-role">Coach Emploi · Bell'Audace</div>
+        </div>
+      </div>
+      <div class="post-body">
+<span class="highlight">🎤 L'entretien d'embauche : ce n'est pas un interrogatoire.</span>
+
+C'est une <em>négociation</em>. Et comme toute négociation, elle se prépare.
+
+Les 5 questions que vous devez absolument maîtriser :
+→ « Parlez-moi de vous » → votre pitch en 2 min chrono
+→ « Pourquoi notre entreprise ? » → montrez votre curiosité
+→ « Votre plus grande faiblesse ? » → transformez-la en atout
+→ « Où vous voyez-vous dans 5 ans ? » → soyez ambitieux mais cohérent
+→ « Avez-vous des questions ? » → OUI, toujours.
+
+La confiance en entretien ne s'improvise pas, elle s'entraîne. 💪
+      </div>
+      <span class="post-tag">#CoachingEmploi #Entretien</span>
+      <a href="https://www.linkedin.com/in/consultanteicn/" target="_blank" class="linkedin-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Voir sur LinkedIn
+      </a>
+    </div>
+
+    <div class="post-card fade-in" style="transition-delay: 0.2s">
+      <div class="post-header">
+        <div class="post-avatar">SD</div>
+        <div>
+          <div class="post-author">Stéphanie Duvoux</div>
+          <div class="post-role">Coach Emploi · Bell'Audace</div>
+        </div>
+      </div>
+      <div class="post-body">
+<span class="highlight">💬 "Je n'ai pas les diplômes requis."</span>
+
+Je l'entends souvent. Et honnêtement ? Ce n'est presque jamais le vrai frein.
+
+Ce qui bloque vraiment c'est la façon dont vous vous présentez.
+
+J'ai accompagné des profils sans bac+5 décrocher des postes de managers. Et des bac+5 qui n'obtenaient aucun retour.
+
+La différence ? <em>La confiance, le discours, la posture.</em>
+
+Vous avez 20 ans d'expérience, 15 ans, ou même 5 ? C'est une richesse. Apprenons à la valoriser comme elle le mérite.
+
+🌟 Votre parcours est unique. Votre valeur aussi.
+      </div>
+      <span class="post-tag">#ConfidenceEnSoi #PersonalBranding</span>
+      <a href="https://www.linkedin.com/in/consultanteicn/" target="_blank" class="linkedin-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Voir sur LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos">
+  <div class="apropos-grid">
+    <div class="apropos-image fade-in">
+      <img src="/mnt/user-data/uploads/1776070160819.jpeg" alt="Stéphanie Duvoux" class="apropos-photo" onerror="this.style.background='linear-gradient(135deg,#E8C48A,#D4A5A0)'; this.style.minHeight='500px'">
+      <div class="apropos-deco"></div>
+    </div>
+    <div class="apropos-content fade-in" style="transition-delay: 0.15s">
+      <div class="section-header">
+        <div class="section-eyebrow">Mon histoire</div>
+        <h2 class="section-title">Stéphanie<br><em>Duvoux</em></h2>
+        <div class="section-divider"></div>
+      </div>
+      <p class="apropos-text">
+        <strong>Mon parcours n'est pas théorique — il est opérationnel.</strong> J'ai passé près de deux décennies au cœur de la relation client de grands comptes (SFR, Engie), grimpant tous les échelons de la performance.
+      </p>
+      <p class="apropos-text">
+        J'ai géré le stress de plateaux à 600 conseillers, doublé des chiffres d'affaires et maintenu <strong>100% de conformité sur 7 audits AFNOR consécutifs</strong>. J'ai formé et certifié plus de <strong>1 400 collaborateurs</strong> à l'excellence.
+      </p>
+      <p class="apropos-text">
+        Aujourd'hui, je mets cette expertise au service des personnes qui veulent décrocher le poste qu'elles méritent ou développer une confiance en soi solide et durable. Parce que <em>la compétence technique est stérile sans la confiance en soi.</em>
+      </p>
+      <div class="expertise-tags">
+        <span class="tag">Coaching emploi</span>
+        <span class="tag">Confiance en soi</span>
+        <span class="tag">Préparation entretien</span>
+        <span class="tag">Rédaction CV</span>
+        <span class="tag">Reconversion</span>
+        <span class="tag">Gestion du changement</span>
+        <span class="tag">Négociation salariale</span>
+        <span class="tag">Formation adultes</span>
+      </div>
+      <div class="certifs">
+        <div class="certif-item">Coach Consultante certifiée — ICN Business School (Niveau 7 RNCP)</div>
+        <div class="certif-item">Titre Professionnel Formateur d'Adultes (VAE, Ministère de l'Emploi)</div>
+        <div class="certif-item">19 ans d'excellence opérationnelle (SFR, Engie)</div>
+        <div class="certif-item">LGBTQ+ Friendly · Gérée par une femme</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRE -->
+<section id="livre">
+  <div class="livre-grid">
+    <div class="livre-image-wrap fade-in">
+      <img src="/mnt/user-data/uploads/1755260656866.jpeg" alt="Confiance au Féminin – Stéphanie Duvoux" class="livre-photo" onerror="this.style.background='linear-gradient(135deg,#E8C48A,#D4A5A0)'; this.style.minHeight='350px'; this.style.minWidth='250px'">
+    </div>
+    <div class="livre-content fade-in" style="transition-delay: 0.15s">
+      <div class="section-header">
+        <div class="section-eyebrow">Mon livre</div>
+        <h2 class="section-title">Confiance<br><em>au Féminin</em></h2>
+        <div class="section-divider"></div>
+      </div>
+      <p class="livre-desc">« Soyez libre d'être vous-même ! »</p>
+      <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
+        Avoir confiance en soi est une compétence qui s'apprend. Vous vous sentez découragée, bloquée, loin de la vie que vous aviez rêvé de vivre ? Ce livre vous donne les clés.
+      </p>
+      <ul class="livre-points">
+        <li>Ce qu'est vraiment la confiance en soi</li>
+        <li>Comment agir de façon plus positive au quotidien</li>
+        <li>Des exercices simples pour changer votre vie</li>
+        <li>Surmonter le syndrome de l'imposteur</li>
+        <li>S'aligner avec qui vous êtes vraiment</li>
+      </ul>
+      <a href="https://www.amazon.fr/confiance-feminin-d%C3%A9veloppement-personnel-estime/dp/B08RRBPWHM" target="_blank" class="amazon-btn">
+        📖 Commander sur Amazon
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS GOOGLE -->
+<section id="avis">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Témoignages</div>
+    <h2 class="section-title">Ce que disent<br><em>mes clients</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="rating-hero fade-in">
+    <div class="rating-number">5.0</div>
+    <div class="stars-row">
+      <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    </div>
+    <div class="rating-count">Note Google · Bell'Audace Coaching Nancy</div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-in">
+      <div class="review-stars"><span>★★★★★</span></div>
+      <p class="review-text">« Stéphanie m'a accompagné pour préparer un entretien de promotion interne. Sa méthode est redoutablement efficace : simulations réalistes, retours concrets, et une écoute bienveillante. J'ai obtenu le poste. »</p>
+      <div class="review-author">Marie-Laure B.</div>
+      <div class="review-date">Avis Google vérifié</div>
+    </div>
+    <div class="review-card fade-in" style="transition-delay: 0.1s">
+      <div class="review-stars"><span>★★★★★</span></div>
+      <p class="review-text">« Après 6 mois de recherche d'emploi sans résultat, 3 séances avec Stéphanie ont tout changé. Mon CV a été entièrement restructuré et j'ai reçu mes premiers retours positifs dès la première semaine. »</p>
+      <div class="review-author">Thomas K.</div>
+      <div class="review-date">Avis Google vérifié</div>
+    </div>
+    <div class="review-card fade-in" style="transition-delay: 0.2s">
+      <div class="review-stars"><span>★★★★★</span></div>
+      <p class="review-text">« Un accompagnement humain et professionnel. Stéphanie comprend vraiment les enjeux du marché du travail. Elle m'a aidée à me valoriser sans me transformer en quelqu'un que je ne suis pas. »</p>
+      <div class="review-author">Aurélie M.</div>
+      <div class="review-date">Avis Google vérifié</div>
+    </div>
+  </div>
+  <div class="google-badge fade-in">
+    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+    Avis Google · Bell'Audace Coaching · Villers-lès-Nancy
+  </div>
+</section>
+
+<!-- RDV FORMULAIRE -->
+<section id="rdv">
+  <div class="rdv-container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Démarrer</div>
+      <h2 class="section-title">Réservez votre<br><em>première séance</em></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="rdv-options fade-in">
+      <div class="rdv-option active" onclick="selectOption(this, 'diagnostic')">
+        <div class="opt-icon">🎁</div>
+        <div class="opt-title">Diagnostic Offert</div>
+        <div class="opt-desc">10 minutes pour faire le point et définir votre plan d'action</div>
+        <span class="opt-badge">Gratuit</span>
+      </div>
+      <div class="rdv-option" onclick="selectOption(this, 'entretien')">
+        <div class="opt-icon">🎯</div>
+        <div class="opt-title">Coaching Entretien</div>
+        <div class="opt-desc">Simulation & préparation intensive à votre entretien</div>
+      </div>
+      <div class="rdv-option" onclick="selectOption(this, 'cv')">
+        <div class="opt-icon">📄</div>
+        <div class="opt-title">Audit CV</div>
+        <div class="opt-desc">Analyse et réécriture de votre CV pour maximiser les retours</div>
+      </div>
+    </div>
+    <div class="rdv-form fade-in">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom *</label>
+          <input type="text" id="rdvPrenom" placeholder="Votre prénom">
+        </div>
+        <div class="form-group">
+          <label>Nom *</label>
+          <input type="text" id="rdvNom" placeholder="Votre nom">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="rdvEmail" placeholder="votre@email.fr">
+        </div>
+        <div class="form-group">
+          <label>Téléphone</label>
+          <input type="tel" id="rdvTel" placeholder="06 xx xx xx xx">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Type de rendez-vous</label>
+          <select id="rdvType">
+            <option value="diagnostic">🎁 Diagnostic offert (10 min)</option>
+            <option value="entretien">🎯 Coaching Entretien</option>
+            <option value="cv">📄 Audit & Rédaction CV</option>
+            <option value="promotion">🚀 Accès à la promotion</option>
+            <option value="reconversion">🔄 Accompagnement Reconversion</option>
+            <option value="confiance">🧠 Coaching Confiance en Soi</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Disponibilités souhaitées</label>
+          <select id="rdvDispo">
+            <option value="">-- Choisir --</option>
+            <option>Matin (9h-12h)</option>
+            <option>Après-midi (13h-17h)</option>
+            <option>Soir (17h-19h)</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group form-full">
+        <label>Votre situation actuelle & vos objectifs</label>
+        <textarea id="rdvMessage" rows="4" placeholder="Décrivez brièvement votre situation (recherche d'emploi, reconversion, promotion...) et ce que vous souhaitez accomplir."></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitRDV()" style="width: 100%; justify-content: center; margin-top: 0.5rem; font-size: 0.9rem; padding: 1.1rem;">
+        Envoyer ma demande de RDV →
+      </button>
+      <p class="form-note">💬 Stéphanie vous recontacte sous 24h. Séances en visio · 06 61 68 61 08</p>
+      <div class="rdv-success" id="rdvSuccess">
+        🎉 Votre demande a bien été envoyée ! Stéphanie vous recontactera sous 24h par SMS ou email pour confirmer votre rendez-vous.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="section-header fade-in">
+        <div class="section-eyebrow">Me Contacter</div>
+        <h2 class="section-title">Parlons de<br><em>votre projet</em></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-info fade-in">
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <strong>Téléphone / SMS</strong>
+            <a href="tel:+33661686108">06 61 68 61 08</a><br>
+            <span style="font-size: 0.75rem; opacity: 0.6;">Priorité au SMS pour un retour rapide</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:bellaudace@gmail.com">bellaudace@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Adresse</strong>
+            20 Rue des Vignerons<br>54600 Villers-lès-Nancy
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">💻</div>
+          <div class="contact-item-text">
+            <strong>Séances</strong>
+            En visio · Format flexible<br>Gain de temps et d'argent
+          </div>
+        </div>
+      </div>
+      <div class="social-links-contact fade-in" style="margin-top: 2rem;">
+        <a href="https://www.facebook.com/stephanieduvoux/" target="_blank" class="social-link-contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/consultanteicn/" target="_blank" class="social-link-contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://wa.me/33661686108" target="_blank" class="social-link-contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="fade-in" style="transition-delay: 0.15s;">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2634.9527380361533!2d6.1484251!3d48.6681466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794a3e036529fc7%3A0xd07fea16145a7a3d!2sBell&#39;Audace%20Coaching!5e0!3m2!1sfr!2sfr!4v1776535764375!5m2!1sfr!2sfr" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Bell'Audace Coaching · Stéphanie Duvoux · <a href="mailto:bellaudace@gmail.com">bellaudace@gmail.com</a> · 06 61 68 61 08 · Villers-lès-Nancy</p>
+  <p style="margin-top: 0.5rem; opacity: 0.5;">LGBTQ+ Friendly · Gérée par une femme · Séances en visio</p>
+</footer>
+
+<script>
+// Intersection Observer pour fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Menu hamburger
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// Fermer menu au clic lien
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+
+// RDV option select
+function selectOption(el, type) {
+  document.querySelectorAll('.rdv-option').forEach(o => o.classList.remove('active'));
+  el.classList.add('active');
+  const sel = document.getElementById('rdvType');
+  const map = { diagnostic: '0', entretien: '1', cv: '2' };
+  if (map[type] !== undefined) sel.selectedIndex = parseInt(map[type]);
+}
+
+// File select
+function handleFileSelect(input) {
+  if (input.files && input.files[0]) {
+    document.getElementById('uploadLabel').textContent = '✅ ' + input.files[0].name;
+  }
+}
+
+// Drag and drop
+const dropZone = document.getElementById('dropZone');
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragging'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragging'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragging');
+  const f = e.dataTransfer.files[0];
+  if (f) document.getElementById('uploadLabel').textContent = '✅ ' + f.name;
+});
+
+// CV submit
+function submitCV() {
+  const email = document.getElementById('cvEmail').value;
+  const prenom = document.getElementById('cvPrenom').value;
+  if (!email || !prenom) { alert('Merci de renseigner votre prénom et email.'); return; }
+  document.getElementById('cvSuccess').style.display = 'block';
+  // En production : envoyer vers un backend ou Formspree
+}
+
+// RDV submit
+function submitRDV() {
+  const prenom = document.getElementById('rdvPrenom').value;
+  const email = document.getElementById('rdvEmail').value;
+  if (!prenom || !email) { alert('Merci de renseigner au minimum votre prénom et email.'); return; }
+  document.getElementById('rdvSuccess').style.display = 'block';
+  // En production : envoyer vers un backend ou Formspree
+}
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 2px 30px rgba(61,53,48,0.08)' : 'none';
+});
+</script>
+</body>
+</html>
